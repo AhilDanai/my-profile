@@ -80,6 +80,11 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio">
+            <div className="animated-bg">
+                <div className="animated-bg-shape"></div>
+                <div className="animated-bg-shape"></div>
+                <div className="animated-bg-shape"></div>
+            </div>
             {/* Navigation */}
             <nav className="main-nav">
                 <div className="container nav-container">
@@ -98,7 +103,7 @@ export default function Portfolio() {
                             <button
                                 key={section}
                                 onClick={() => scrollToSection(section)}
-                                className={`nav-link ${activeSection === section ? 'active' : ''}`}
+                                className={`nav-link ${activeSection === section ? 'active' : ''} glass-effect`}
                             >
                                 {section}
                             </button>
@@ -152,17 +157,17 @@ export default function Portfolio() {
                             className="home-text"
                         >
                             <h1 className="main-heading">
-                                Hi, I'm <span className="gradient-text">Ahil Danai</span>
+                                Hi, I'm <span className="gradient-animated-text">Ahil Danai</span>
                             </h1>
                             <h2 className="sub-heading">Frontend Developer</h2>
                             <p className="intro-text">
                                 Passionate about creating intuitive, responsive web experiences using modern frontend technologies.
                             </p>
                             <div className="button-group">
-                                <button onClick={() => scrollToSection('contact')} className="primary-button">
+                                <button onClick={() => scrollToSection('contact')} className="primary-button btn-3d magnetic-button">
                                     Get in Touch
                                 </button>
-                                <button onClick={() => scrollToSection('projects')} className="secondary-button">
+                                <button onClick={() => scrollToSection('projects')} className="secondary-button btn-3d magnetic-button">
                                     View Projects
                                 </button>
                             </div>
@@ -171,7 +176,7 @@ export default function Portfolio() {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="profile-image-container"
+                            className="profile-image-container glow-effect"
                         >
                             <div className="profile-image-border">
                                 <div className="profile-image">
@@ -194,7 +199,7 @@ export default function Portfolio() {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="section-heading">
-                            <span className="heading-underline">About Me</span>
+                            <span className="heading-underline scroll-underline">About Me</span>
                         </h2>
                         <div className="about-content">
                             <div className="about-summary">
@@ -258,7 +263,7 @@ export default function Portfolio() {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="section-heading">
-                            <span className="heading-underline">Experience</span>
+                            <span className="heading-underline scroll-underline">Experience</span>
                         </h2>
                         <div className="timeline-container">
                             <div className="timeline">
@@ -280,7 +285,7 @@ export default function Portfolio() {
                                                 <p className="job-duration">6 months</p>
                                             </motion.div>
                                         </div>
-                                        <div className="timeline-marker purple-bg">
+                                        <div className="timeline-marker glow-effect purple-bg">
                                             <GraduationCap size={24} />
                                         </div>
                                         <div className="timeline-right">
@@ -289,7 +294,7 @@ export default function Portfolio() {
                                                 whileInView={{ opacity: 1, x: 0 }}
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.5 }}
-                                                className="experience-card"
+                                                className="experience-card tilt-effect"
                                             >
                                                 <ul className="experience-list">
                                                     <li>Assisted in designing and coding front-end features using HTML5, CSS3, JavaScript, and jQuery</li>
@@ -316,7 +321,7 @@ export default function Portfolio() {
                                                 <p className="job-duration">1 year 2 months</p>
                                             </motion.div>
                                         </div>
-                                        <div className="timeline-marker">
+                                        <div className="timeline-marker glow-effect">
                                             <Briefcase size={24} />
                                         </div>
                                         <div className="timeline-right">
@@ -325,7 +330,7 @@ export default function Portfolio() {
                                                 whileInView={{ opacity: 1, x: 0 }}
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.5 }}
-                                                className="experience-card"
+                                                className="experience-card tilt-effect"
                                             >
                                                 <ul className="experience-list">
                                                     <li>Developed responsive user interfaces using React, Bootstrap, and custom CSS</li>
@@ -372,7 +377,7 @@ export default function Portfolio() {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="section-heading">
-                            <span className="heading-underline">Skills</span>
+                            <span className="heading-underline scroll-underline">Skills</span>
                         </h2>
                         <div className="skills-grid">
                             {skills.map((skill, index) => (
@@ -394,7 +399,7 @@ export default function Portfolio() {
                                             whileInView={{ width: `${skill.level}%` }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 1, delay: 0.2 }}
-                                            className={`skill-progress ${skill.color}`}
+                                            className={`skill-progress ${skill.color} skill-glow`}
                                         ></motion.div>
                                     </div>
                                 </motion.div>
@@ -414,7 +419,7 @@ export default function Portfolio() {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="section-heading">
-                            <span className="heading-underline">Projects</span>
+                            <span className="heading-underline scroll-underline">Projects</span>
                         </h2>
                         <div className="projects-grid">
                             {projects.map((project, index) => (
@@ -425,7 +430,7 @@ export default function Portfolio() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                     whileHover={{ y: -10 }}
-                                    className="project-card"
+                                    className="project-card glass-effect hover-lift hover-card"
                                 >
                                     <div className={`project-stripe ${project.color}`}></div>
                                     <div className="project-content">
@@ -453,7 +458,7 @@ export default function Portfolio() {
             </section>
 
             {/* Contact Section */}
-            <section id="contact" className="contact-section">
+            <section id="contact" className="contact-section wavy-bg">
                 <div className="container">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -462,7 +467,7 @@ export default function Portfolio() {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="section-heading">
-                            <span className="heading-underline">Get In Touch</span>
+                            <span className="heading-underline scroll-underline">Get In Touch</span>
                         </h2>
                         <div className="contact-content">
                             <div className="contact-info">
@@ -502,7 +507,7 @@ export default function Portfolio() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="contact-form-container">
+                            <div className="contact-form-container spotlight">
                                 <form className="contact-form">
                                     <div className="form-group">
                                         <label htmlFor="name" className="form-label">Name</label>
@@ -542,7 +547,7 @@ export default function Portfolio() {
             </section>
 
             {/* Footer */}
-            <footer className="footer">
+            <footer className="footer wavy-bg">
                 <div className="container">
                     <p className="footer-text">
                         &copy; {new Date().getFullYear()} Ahil Danai. All rights reserved.
