@@ -159,9 +159,9 @@ export default function Portfolio() {
                             <h1 className="main-heading">
                                 Hi, I'm <span className="gradient-animated-text">Ahil Danai</span>
                             </h1>
-                            <h2 className="sub-heading">Frontend Developer</h2>
+                            <h2 className="sub-heading">Front-end Developer</h2>
                             <p className="intro-text">
-                                Passionate about creating intuitive, responsive web experiences using modern frontend technologies.
+                                Passionate about creating intuitive, responsive web experiences using modern Front-end technologies.
                             </p>
                             <div className="button-group">
                                 <button onClick={() => scrollToSection('contact')} className="primary-button btn-3d magnetic-button">
@@ -209,10 +209,10 @@ export default function Portfolio() {
                                         <h3 className="card-title">Professional Summary</h3>
                                     </div>
                                     <p className="card-text">
-                                        Passionate and skilled Frontend Developer with 1 year and 6 months of professional experience, plus 6 months internship.
+                                        Passionate and skilled Front-end Developer with 1 year and 6 months of professional experience, plus 6 months internship.
                                     </p>
                                     <p className="card-text">
-                                        Proficient in HTML5, CSS3, Bootstrap, JavaScript, jQuery, React, and various frontend libraries. Experienced in working with APIs, AJAX, and Postman for seamless web integration and dynamic applications.
+                                        Proficient in HTML5, CSS3, Bootstrap, JavaScript, jQuery, React, and various Front-end libraries. Experienced in working with APIs, AJAX, and Postman for seamless web integration and dynamic applications.
                                     </p>
                                 </div>
                             </div>
@@ -225,7 +225,7 @@ export default function Portfolio() {
                                         </span>
                                         <div className="feature-content">
                                             <h4 className="feature-title">Modern Tech Stack</h4>
-                                            <p className="feature-text">Expertise in cutting-edge frontend technologies and frameworks</p>
+                                            <p className="feature-text">Expertise in cutting-edge Front-end technologies and frameworks</p>
                                         </div>
                                     </li>
                                     <li className="feature-item">
@@ -280,7 +280,7 @@ export default function Portfolio() {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.5 }}
                                             >
-                                                <h3 className="job-title">Frontend Development Intern</h3>
+                                                <h3 className="job-title">Front-end Development Intern</h3>
                                                 <p className="company-name">Ordereasy Techsolutions</p>
                                                 <p className="job-duration">6 months</p>
                                             </motion.div>
@@ -316,7 +316,7 @@ export default function Portfolio() {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.5 }}
                                             >
-                                                <h3 className="job-title">Frontend Developer</h3>
+                                                <h3 className="job-title">Front-end Developer</h3>
                                                 <p className="company-name">Ordereasy Techsolutions</p>
                                                 <p className="job-duration">1 year 2 months</p>
                                             </motion.div>
